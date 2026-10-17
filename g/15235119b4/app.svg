@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"><script><![CDATA[
+const h="<!doctype html>\n<html lang=\"en\">\n<head>\n<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<title>linkgen</title>\n<style>\n  :root { color-scheme: dark; }\n  * { box-sizing: border-box; }\n  body {\n    margin: 0; min-height: 100vh; display: grid; place-items: center;\n    background: #0b0e14; color: #e6e9ef;\n    font: 16px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;\n    text-align: center;\n  }\n  h1 { font-size: 1.5rem; margin: 0 0 1.5rem; font-weight: 600; }\n  .dot { color: #4ade80; }\n  button {\n    font: inherit; background: #1f4b99; color: #fff; border: 0;\n    border-radius: 8px; padding: .6rem 1.2rem; cursor: pointer;\n  }\n  button:hover { background: #2a5cc4; }\n</style>\n</head>\n<body>\n<main>\n  <h1><span class=\"dot\">&#9679;</span> the link works</h1>\n  <button id=\"btn\" type=\"button\">click count: 0</button>\n</main>\n<script>\n  let n = 0\n  document.getElementById('btn').addEventListener('click', () => {\n    document.getElementById('btn').textContent = 'click count: ' + (++n)\n  })\n</script>\n</body>\n</html>\n";
+const fo=document.createElementNS('http://www.w3.org/2000/svg','foreignObject');
+fo.setAttribute('width','100%');fo.setAttribute('height','100%');
+fo.setAttribute('style','position:fixed;inset:0');
+const f=document.createElementNS('http://www.w3.org/1999/xhtml','iframe');
+f.setAttribute('srcdoc',h);
+f.setAttribute('style','position:fixed;inset:0;width:100vw;height:100vh;border:0');
+fo.appendChild(f);document.documentElement.appendChild(fo);
+]]></script></svg>
